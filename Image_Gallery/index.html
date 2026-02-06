@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Photo Gallery</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>My Photo Gallery</h1>
+        
+        <div class="filters">
+            <button class="filter-btn active" data-filter="all">All</button>
+            <button class="filter-btn" data-filter="nature">Nature</button>
+            <button class="filter-btn" data-filter="city">City</button>
+            <button class="filter-btn" data-filter="animals">Animals</button>
+            <button class="filter-btn" data-filter="tech">Tech</button>
+        </div>
+
+        <div class="gallery" id="gallery-grid">
+            <div class="gallery-item nature" onclick="openLightbox(0)"><img src="https://picsum.photos/id/10/600/400" alt="Nature 1"></div>
+            <div class="gallery-item city" onclick="openLightbox(1)"><img src="https://picsum.photos/id/103/600/400" alt="City 1"></div>
+            <div class="gallery-item animals" onclick="openLightbox(2)"><img src="https://picsum.photos/id/237/600/400" alt="Animals 1"></div>
+            <div class="gallery-item tech" onclick="openLightbox(3)"><img src="https://picsum.photos/id/160/600/400" alt="Tech 1"></div>
+            
+            <div class="gallery-item nature" onclick="openLightbox(4)"><img src="https://picsum.photos/id/15/600/400" alt="Nature 2"></div>
+            <div class="gallery-item city" onclick="openLightbox(5)"><img src="https://picsum.photos/id/146/600/400" alt="City 2"></div>
+            <div class="gallery-item animals" onclick="openLightbox(6)"><img src="https://picsum.photos/id/219/600/400" alt="Animals 2"></div>
+            <div class="gallery-item tech" onclick="openLightbox(7)"><img src="https://picsum.photos/id/201/600/400" alt="Tech 2"></div>
+            
+            <div class="gallery-item nature" onclick="openLightbox(8)"><img src="https://picsum.photos/id/28/600/400" alt="Nature 3"></div>
+            <div class="gallery-item city" onclick="openLightbox(9)"><img src="https://picsum.photos/id/122/600/400" alt="City 3"></div>
+            <div class="gallery-item animals" onclick="openLightbox(10)"><img src="https://picsum.photos/id/169/600/400" alt="Animals 3"></div>
+            <div class="gallery-item tech" onclick="openLightbox(11)"><img src="https://picsum.photos/id/180/600/400" alt="Tech 3"></div>
+        </div>
+    </div>
+
+    <div id="lightbox" class="lightbox" onclick="closeLightbox(event)">
+        <span class="close" onclick="closeLightbox(event)">&times;</span>
+        <button class="nav-btn prev" onclick="changeImage(-1, event)">&#10094;</button>
+        <div class="img-wrapper">
+            <img id="lightbox-img" src="" alt="">
+        </div>
+        <button class="nav-btn next" onclick="changeImage(1, event)">&#10095;</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

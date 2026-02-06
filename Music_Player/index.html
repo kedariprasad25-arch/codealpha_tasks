@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vinyl Music Player</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+    <div class="main-container">
+        
+        <div class="music-player">
+            <div class="disk-container">
+                <div class="disk" id="disk">
+                    <div class="disk-center"></div>
+                </div>
+            </div>
+
+            <div class="song-info">
+                <h2 id="title">Song Title</h2>
+                <h3 id="artist">Artist Name</h3>
+            </div>
+
+            <div class="progress-container" id="progress-container">
+                <div class="progress" id="progress"></div>
+                <div class="time-info">
+                    <span id="curr-time">0:00</span>
+                    <span id="dur-time">0:00</span>
+                </div>
+            </div>
+
+            <div class="controls">
+                <button id="prev" class="action-btn"><i class="fas fa-backward"></i></button>
+                <button id="play" class="action-btn big"><i class="fas fa-play"></i></button>
+                <button id="next" class="action-btn"><i class="fas fa-forward"></i></button>
+            </div>
+
+            <div class="volume-container">
+                <i class="fas fa-volume-down"></i>
+                <input type="range" id="volume-slider" min="0" max="1" step="0.1" value="1">
+                <i class="fas fa-volume-up"></i>
+            </div>
+        </div>
+
+        <div class="playlist-panel">
+            <h3>Playlist</h3>
+            <ul id="playlist-items">
+            </ul>
+        </div>
+
+    </div>
+
+    <audio id="audio"></audio>
+
+    <script src="script.js"></script>
+</body>
+</html>
